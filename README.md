@@ -1,5 +1,6 @@
 # contact-list
 
+
 ## Project setup
 ```
 npm install
@@ -10,25 +11,5 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Note : Click on name on the list or double click on the photo to see details of contact.
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
