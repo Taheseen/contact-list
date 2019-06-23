@@ -3,19 +3,29 @@
     position: fixed;
     background-color: black;
     z-index: 1;
+    width: 100%;
+    overflow: scroll;
 
     &__images {
         height: 158px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
         overflow-x: scroll;
-        overflow-y: hidden;
-        white-space:nowrap;
+        overflow-y: scroll;
+        white-space: nowrap;
         margin: 30px 15px;
 
+        &__name {
+            text-transform: capitalize;
+            text-align: center;
+            margin-top:5px;
+        }
         img {
             box-shadow: 1px 1px 10px #999;
             border-radius: 15px;
+            cursor: pointer;
         }
     }
 

@@ -5,14 +5,15 @@
     <div class="carousel">
       <div class="carousel__images">
         <div class="col" v-for="(images, i)  in carouselList" :key="i">
-          <img :src="images.image" v-on:click="profiletab=images.email; scrollToProfile()"/>
+          <img :src="images.image" v-on:click="profiletab=images.email; scrollToProfile()" on:dblclick="scrollToProfile()"/>
+          <p class="carousel__images__name">{{images.last}} {{images.first}} </p>
         </div>
       </div>
     </div>
       <div class="contacts__list__all">
       <div v-for="(tabs, index) in tabList" class="contacts__list__profile">
         <a v-on:click="activetab=tabs" class="pagination active-tab" >{{tabs}}</a>
-        <div class="tabs" v-for="(item, index) in filtered[tabs]">
+        <div class="tabs" v-for="(item, index) in filtered[tabs]" :id="'active-tab' + index">
                 <div>
                   <a v-on:click="profiletab=item.email" class="pagination" 
                     v-bind:class="[ profiletab === item.email ? 'active' : '' ]"> {{item.name.last}} {{item.name.first}}</a>

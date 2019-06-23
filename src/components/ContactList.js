@@ -41,9 +41,7 @@ export default {
   methods: {
     scrollToProfile () {
       let el = document.getElementsByClassName('active')[0]
-      console.log(el, 'el')
-      el.postions()
-      console.log(el.top, el.right, el.bottom, el.left)
+      el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' })
     }
   }
 }
