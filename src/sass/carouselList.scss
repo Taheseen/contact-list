@@ -1,0 +1,22 @@
+
+.carousel {
+    position: fixed;
+    background-color: black;
+    z-index: 1;
+
+    &__images {
+        height: 158px;
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space:nowrap;
+        margin: 30px 15px;
+
+        img {
+            box-shadow: 1px 1px 10px #999;
+            border-radius: 15px;
+        }
+    }
+
+}
