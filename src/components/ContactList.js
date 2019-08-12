@@ -26,6 +26,7 @@ export default {
           image: item.picture.large,
           email: item.email
         })
+        console.log(self.tabList, 'tablist')
         self.tabList.filter(function (letter) {
           if (letter.toLowerCase() === item.name.last.substring(0, 1)) {
             if (!self.orderedList || !self.orderedList[letter]) {

@@ -1,40 +1,14 @@
-.home {
-    background-image: url(../assets/home_bg.jpg);
-    background-size: contain;
-    background-repeat: round;
 
-    &__content {
-        margin: 10%;
-
-        &__text {
-            margin-top: 15%;
-        }
-    }
-}
-.contacts{
-    background: black;
-}
-.container-fluid {
-    overflow-y: scroll;
-    position: relative;
-    height: 80vh;
-    margin-top: 6%;
-    
-    h3 {
-        text-decoration: underline;
-        text-align: center;
-    }
     .contacts__list{
         @import "./carouselList";
+        display: flex;
+        flex-direction: column;
 
-        &__all {
-            padding-top: 180px;
-        }
-        .left-content {
-            padding: 60px;
-            text-align: left;
-            width: 30%;
-        }
+        // .left-content {
+        //     padding: 60px;
+        //     text-align: left;
+        //     width: 30%;
+        // }
     
         &__profile {
             margin: 3% 0%;
@@ -42,15 +16,10 @@
         .active-tab {
             font-size: 40px;
             font-weight: 500;
-            color: #9c2828;
+            color: #ffb72b;
         }
 
-        .tabs {
-           display: inline-block;
-           width: 100%;
-           margin-top: 15px;
-
-           .active {
+        .active {
             -webkit-transition: color 1s, font-size 1s;
             -moz-transition: color 1s, font-size 1s;
             -o-transition: color 1s, font-size 1s;
@@ -59,9 +28,7 @@
             font-weight: bold;
             font-size: 30px;
             text-decoration: underline;
-            color: #9c2828;
-        }
-
+            color: #ffb72b;
         }
         a {
           margin-left: 30px;
@@ -76,12 +43,13 @@
             -webkit-animation: fadein 2s;
             animation: fadein 2s;
             border: 1px solid white;
-            border-radius: 20px;
+            border-radius: 10px;
             animation: fadein 2s;
+            padding: 3%;
+            display: inline-grid;
            
             &__pic {
-                margin: 5% 0% 5% 5%;
-                float: left;
+                width: 80%;
             }
             img{
                 border-radius: 15px;
@@ -93,19 +61,12 @@
             }
 
             &__info {
-                margin-left: 30%;
-                text-align: left;
                 font-size: 18px;
-                margin: 3% 0%;
-
-                p{
-                    margin-bottom: 5px;
-                }
             }
         }
       }
     }
-  }
+  
  
 @keyframes fadein {
     from { opacity: 0; }
@@ -134,13 +95,4 @@
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
-
-
-@media only screen and (max-width: 600px) {
-    nav {
-        background: none !important;
-        position: relative !important;
-        height: auto !important;
-    }
 }

@@ -1,21 +1,10 @@
 
 .carousel {
-    position: fixed;
-    background-color: black;
-    z-index: 1;
-    width: 100%;
-    overflow: scroll;
-
+    
     &__images {
-        height: 158px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        width: 100%;
+        flex-direction: row;
         overflow-x: scroll;
-        overflow-y: scroll;
-        white-space: nowrap;
-        margin: 30px 15px;
 
         &__name {
             text-transform: capitalize;
@@ -24,9 +13,24 @@
         }
         img {
             box-shadow: 1px 1px 10px #999;
-            border-radius: 15px;
+            border-radius: 10px;
             cursor: pointer;
         }
     }
 
+}
+
+@media (min-width: 768px) {
+
+    .carousel {
+    
+        &__images {
+            display: block;
+            height: 50px;
+
+            div {
+                display: inline-block;
+            }
+        }
+    }
 }
