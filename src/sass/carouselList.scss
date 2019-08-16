@@ -1,11 +1,19 @@
 
 .carousel {
-    
+    width: 95%;
+
     &__images {
         display: flex;
         flex-direction: row;
         overflow-x: scroll;
 
+        li {
+            list-style: none;
+            margin: 0 1em;
+        }
+        li:first-child {
+            margin-left: 0;
+        }
         &__name {
             text-transform: capitalize;
             text-align: center;
@@ -25,9 +33,6 @@
     .carousel {
     
         &__images {
-            display: block;
-            height: 50px;
-
             div {
                 display: inline-block;
             }

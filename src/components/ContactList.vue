@@ -2,12 +2,12 @@
 
     <div v-if="dataLoaded" class="contacts__list">
       <div class="carousel">
-        <div class="carousel__images">
-          <div v-for="(images, i)  in carouselList" :key="i">
+        <ul class="carousel__images">
+          <li v-for="(images, i)  in carouselList" :key="i">
             <img :src="images.image" v-on:click="profiletab=images.email; scrollToProfile()" on:dblclick="scrollToProfile()"/>
             <p class="carousel__images__name">{{images.last}} {{images.first}} </p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div class="contacts__list__all">
       <div v-for="(tabs, index) in tabList" :key="index" class="contacts__list__profile">

@@ -1,7 +1,17 @@
+.carousel {
+  width: 95%;
+}
 .carousel__images {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+}
+.carousel__images li {
+  list-style: none;
+  margin: 0 1em;
+}
+.carousel__images li:first-child {
+  margin-left: 0;
 }
 .carousel__images__name {
   text-transform: capitalize;
@@ -14,10 +24,6 @@
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .carousel__images {
-    display: block;
-    height: 50px;
-  }
   .carousel__images div {
     display: inline-block;
   }
